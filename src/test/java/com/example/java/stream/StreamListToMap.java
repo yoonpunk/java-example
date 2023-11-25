@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 /**
  * stream 을 통해 리스트에서 맵으로 변환 List<ProductDto> -> Map<Long, ProductDto>
  */
-public class ToMapTest {
+public class StreamListToMap {
 
     /**
      * List -> Map
@@ -73,7 +73,7 @@ public class ToMapTest {
             .collect(Collectors.toMap(
                     ProductDto::getId, // key
                     Function.identity(), // value
-                    (oldOne, newOne) -> newOne // 새 것으로 대치하는 mergerFunction (람다식 사용)
+                    (oldOne, newOne) -> newOne // mergerFunction 사용, 대체 로직을 구현하면 된다 (람다식 사용)
                 )
             );
 
