@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
 /**
- * stream 을 통해 리스트에서 맵으로 변환 List<ProductDto> -> Map<Long, ProductDto>
+ * Collectors.toMap()을 통해 리스트에서 맵으로 변환 List<ProductDto> -> Map<Long, ProductDto>
  */
-public class StreamListToMap {
+public class CollectorsListToMap {
 
     /**
      * List -> Map
